@@ -1,0 +1,59 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Conventional Commit Message Rules
+
+## Format
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+## Types
+- `feat`: A new feature (MINOR version)
+- `fix`: A bug fix (PATCH version)
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing tests or correcting existing tests
+- `chore`: Changes to the build process or auxiliary tools and libraries
+
+## Breaking Changes
+- Include `BREAKING CHANGE:` in the commit message body
+- Or add `!` after type/scope (e.g., `feat!: send an email to the customer`)
+
+## Examples
+```
+feat: add weather agent implementation
+
+feat(api): add new endpoint for weather data
+
+fix: resolve login workflow error
+
+docs: update API documentation
+
+style: format code according to style guide
+
+refactor: restructure workflow steps
+
+test: add unit tests for weather tool
+
+chore: update dependencies
+
+feat!: change API response format
+
+BREAKING CHANGE: API response format has been changed to include additional fields
+```
+
+## Rules
+1. Type is required and must be lowercase
+2. Scope is optional and must be in parentheses
+3. Description is required and must be in imperative mood
+4. Body is optional and should describe the change in detail
+5. Footer is optional and should include related issue numbers or breaking changes
